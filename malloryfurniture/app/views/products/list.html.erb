@@ -1,13 +1,15 @@
+<%= debug @products %>
+
 <div class="container">
-  <% if @products.blank? %>
+  <% if @furnitureitems.blank? %>
     <strong>WE SOLD IT ALL</strong>
   <% else %>
-    <% @products.each do |product| %>
+    <% @furnitureitems.each do |furnitureitem| %>
       <div class="product-box">
-        picture
-        <span><%= product.item %></span>
-        <span>$<%= product.price %></span>
-        More Info
+        <%= image_tag furnitureitem.img_name %>
+        <span><%= furnitureitem.item %></span>
+        <span>$<%= furnitureitem.price %></span>
+        <%= link_to "More Info", "/products/#{furnitureitem.pid}" %>
       </div>
     <% end %>
   <% end %>
