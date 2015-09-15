@@ -21,3 +21,20 @@
     height: auto;
   }
 }
+
+.detail-box{
+  display: flex;
+  img{
+    max-width: 67%;
+    height: auto;
+  }
+  h4{
+    background-color: #F6C700;
+  }
+  h5{
+    background-color: #eee;
+  }
+  h5.price{
+    background-color: #B1FAED;
+  }
+}

@@ -1,1 +1,16 @@
-<%= image_tag @furnitureitem.img_name %>
+<div class="container">
+  <div class="detail-box">
+    <%= image_tag @furnitureitem.img_name %>
+    <div class="detail-box-text">
+      <h4><%= @furnitureitem.item %></h4>
+      <h5 class="price">Price</h5>
+      <p>$<%= @furnitureitem.price %></p>
+      <h5>Description</h5>
+      <p><%= @furnitureitem.description %></p>
+      <h5>Dimensions</h5>
+      <p>Width: <%= @furnitureitem.dimension_w %></p>
+      <p>Length: <%= @furnitureitem.dimension_l %></p>
+      <p>Height: <%= @furnitureitem.dimension_h %></p>
+    </div>
+  </div>
+</div>
