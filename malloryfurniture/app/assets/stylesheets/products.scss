@@ -14,6 +14,64 @@ h2{
   padding-bottom: .5em;
 }
 
+.home-container{
+  width: 100%;
+  height: 300px;
+  // background-image: url(http://bohmphotography.com/wp-content/flagallery/professional-photography-studio/1westsidepanels_0010_96_7x.jpg);
+  // opacity: 0.4;
+  text-align: right;
+  // padding: 10px;
+  .home-text{
+    // margin-top: 50px;
+    // margin-bottom: 50px;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px;
+    height: 300px;
+    img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      opacity: 0.4;
+    }
+    h3{
+      opacity: 1.0;
+      font-family: 'Alegreya', serif;
+      margin-top: 75px;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 2;
+      margin-right: 15px;
+    }
+    h4{
+      opacity: 1.0;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 2;
+      margin-right: 15px;
+    }
+    span{
+      opacity: 1.0;
+      color: white;
+      background-color: #2578BA;
+      padding: 10px;
+      border: solid 1px #2578BA;
+      border-radius: 6px;
+      position: relative;
+      z-index: 2;
+      margin-right: 15px;
+      margin-bottom: 25px;
+      a{
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 .col-md-3{
   min-height: 343px;
   margin-bottom: 25px;
