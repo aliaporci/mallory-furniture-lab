@@ -1,10 +1,21 @@
+<%= debug @furnitureitem.condition %>
+<%= debug @furnitureitem.condition.to_s %>
+
+
 <div class="container">
   <div class="detail-box">
     <%= image_tag @furnitureitem.img_name %>
     <div class="detail-box-text">
       <h4><%= @furnitureitem.item %></h4>
       <h5 class="price">Price</h5>
-      <p>$<%= @furnitureitem.price %></p>
+      <p>$<% if @furnitureitem.condition.to_s == "good" %>
+              <%=  @furnitureitem.price.to_i*9/10 %> New Clearance Price!!!
+            <%  elsif @furnitureitem.condition.to_s == "average" %>
+              <%=  @furnitureitem.price.to_i*8/10 %> New Clearance Price!!!
+            <% else %>
+              <%= @furnitureitem.price %>
+
+      <% end %></p>
       <h5>Description</h5>
       <p><%= @furnitureitem.description %></p>
       <h5>Dimensions</h5>
