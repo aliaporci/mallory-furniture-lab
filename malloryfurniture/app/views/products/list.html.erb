@@ -1,0 +1,15 @@
+<div class="container">
+  <% if @products.blank? %>
+    <strong>WE SOLD IT ALL</strong>
+  <% else %>
+    <% @products.each do |product| %>
+      <div class="product-box">
+        picture
+        <span><%= product.item %></span>
+        <span>$<%= product.price %></span>
+        More Info
+      </div>
+    <% end %>
+  <% end %>
+
+</div>
