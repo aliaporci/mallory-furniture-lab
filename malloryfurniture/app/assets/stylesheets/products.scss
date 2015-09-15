@@ -4,6 +4,15 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "https://fonts.googleapis.com/css?family=Alegreya"; /* holy shit, I think I found it */
+
+h2{
+  font-family: 'Alegreya', serif;
+  color: white;
+  background-color: #293D50;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
 
 .col-md-3{
   min-height: 343px;
