@@ -1,17 +1,22 @@
-<%= debug @products %>
-
+<!-- <%= debug @products %> -->
 <div class="container">
-  <% if @furnitureitems.blank? %>
-    <strong>WE SOLD IT ALL</strong>
-  <% else %>
-    <% @furnitureitems.each do |furnitureitem| %>
-      <div class="product-box">
-        <%= image_tag furnitureitem.img_name %>
-        <span><%= furnitureitem.item %></span>
-        <span>$<%= furnitureitem.price %></span>
-        <%= link_to "More Info", "/products/#{furnitureitem.pid}" %>
-      </div>
+  <div class="row">
+    <% if @furnitureitems.blank? %>
+      <strong>WE SOLD IT ALL</strong>
+    <% else %>
+      <% @furnitureitems.each do |furnitureitem| %>
+        <div class="col-md-3 box-adjuster">
+          <div class="product-box">
+            <%= image_tag furnitureitem.img_name %>
+            <span><%= furnitureitem.item %></span>
+            <br>
+            <span>$<%= furnitureitem.price %></span>
+            <br>
+            <%= link_to "More Info", "/products/#{furnitureitem.pid}" %>
+          </div>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
 
+  </div>
 </div>
