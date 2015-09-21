@@ -1,5 +1,5 @@
 require 'csv'
-require 'furnitureitem'
+# require 'furnitureitem'
 
 class ProductsController < ApplicationController
   def home
@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
       furnitureitem.img_name = row.to_h["img_name"]
       furnitureitem.quantity = row.to_h["quantity"]
       furnitureitem.category = row.to_h["category"]
-      
+
 
       @furnitureitems << furnitureitem
     end

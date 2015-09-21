@@ -1,4 +1,7 @@
-<!-- <%= debug @products %> -->
+<%= debug @furnitureitems.third.adj_price %>
+<%= debug @furnitureitems.third.condition %>
+
+
 <div class="container">
   <div class="row">
     <% if @furnitureitems.blank? %>
@@ -11,14 +14,15 @@
               <%= image_tag furnitureitem.img_name %>
               <span><%= furnitureitem.item %></span>
               <br>
-              <span>$<% if furnitureitem.condition.to_s == "good" %>
+              <span><%= number_to_currency furnitureitem.adj_price %><%= furnitureitem.clearance? %></span>
+              <!-- <span>$<% if furnitureitem.condition.to_s == "good" %>
                       <%=  furnitureitem.price.to_i*9/10 %> New Clearance Price!!!
                     <%  elsif furnitureitem.condition.to_s == "average" %>
                       <%=  furnitureitem.price.to_i*8/10 %> New Clearance Price!!!
                     <% else %>
                       <%= furnitureitem.price %>
 
-              <% end %></span>
+              <% end %></span> -->
               <br>
               <%= link_to "More Info", "/products/#{furnitureitem.pid}" %>
             </div>
